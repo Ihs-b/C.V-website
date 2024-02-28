@@ -1,17 +1,96 @@
 body{
+    margin: 0;
     background-color: black;
     color: white;
-}
-
-li{
-    list-style-type: none;
+    line-height: 2;
 }
 
 a{
     text-decoration: none;
+    color: white;
 }
 
 header{
     /* background-color: beige; */
-    border: solid 1px white;
+    /* border: solid 1px white; */
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 10%;
+    height: 120px;
+    float: left
+}
+
+.navbar{
+    float: right;
+}
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navbar li {
+    display: inline-block;
+    margin: 50px 40px;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.intro-container{
+    display: flex;
+    /* flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+    padding: 20px;
+}
+
+
+
+.profile-img{
+    width: 30%;
+    /* height: 350px; */
+    border-radius: 15px;
+}
+
+
+.intro-container h1{
+    font-size: 2.5rem;
+    width: 55%;
+}
+
+.underline{
+    text-decoration-line: underline ;
+    text-decoration-color: pink;
+}
+
+.intro-text{
+    margin-left: 20px;
+    padding: 25px;
+}
+
+img{
+    width: 50%;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 50px;
+    margin: auto;
 }
