@@ -5,92 +5,208 @@ body{
     line-height: 2;
 }
 
-a{
-    text-decoration: none;
+h1, h2, h3, h4{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    /*border: solid 1px white;*/
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-item {
     color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.navbar-item:last-child {
+    margin-left: 0;
 }
 
-header{
-    /* background-color: beige; */
-    /* border: solid 1px white; */
+.navbar-item:hover {
+    color: #ddd;
 }
 
-header::after{
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.container{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.logo{
-    width: 10%;
-    height: 120px;
-    float: left
-}
-
-.navbar{
-    float: right;
-}
-
-.navbar ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-.navbar li {
-    display: inline-block;
-    margin: 50px 40px;
-}
+/*.logo{*/
+/*    width: 40%;*/
+/*    !*height: 120px;*!*/
+/*}*/
 
 main{
-    width: 80%;
-    margin: 0 auto;
+    /*border: solid 2px yellow;*/
+    width: 70%;
+    margin: 10px auto 20px;
 }
+
 
 
 .intro-container{
     display: flex;
-    /* flex-direction: row;
     justify-content: space-between;
-    align-items: center; */
+    align-items: center;
     padding: 20px;
 }
 
+.intro-text{
+    margin-left: 20px;
 
-
-.profile-img{
-    width: 30%;
-    /* height: 350px; */
-    border-radius: 15px;
 }
-
-
-.intro-container h1{
-    font-size: 2.5rem;
-    width: 55%;
+p{
+    font-family: "Oswald" ;
+    font-weight: lighter;
+}
+.profile-img{
+    border-radius: 15px;
+    width: 50%;
+    /*height: 10.5rem;*/
 }
 
 .underline{
     text-decoration-line: underline ;
     text-decoration-color: pink;
 }
-
-.intro-text{
-    margin-left: 20px;
-    padding: 25px;
+a{
+    text-decoration: none;
+    color: white;
+    font-family: "Bebas Neue";
 }
 
 img{
-    width: 50%;
+    width: 18.75rem;
+    height: 14.5rem;
 }
 
 .skills{
+    text-align: center;
     display: grid;
     grid-template-columns: auto auto auto;
     row-gap: 50px;
-    margin: auto;
+}
+
+.second-contact-me{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*.projects-title{*/
+    /*margin-left: 5rem;*/
+    /*margin-right: 20rem;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.projects {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    text-align: center;*/
+/*}*/
+/*.project-row {*/
+/*    flex: 0 0 21%; !* Adjust as needed *!*/
+/*    margin: 1%; !* For some gap between the boxes *!*/
+/*}*/
+
+
+.projects{
+    text-align: center;
+    margin-top: 10px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /*gap: 10px;*/
+    /*border: solid 1px hotpink;*/
+}
+
+footer{
+    background-color: #333333;
+}
+
+.footer-container{
+    /*border: solid 1px orange;*/
+    display: flex;
+    /*justify-content: center;*/
+    justify-content: space-around;
+    width: 70%;
+    margin: 10px auto 20px;
+}
+
+.contact-message{
+    padding: 0 15px;
+}
+
+.contact-message h1{
+    margin-bottom: 0;
+}
+
+.contact-message p{
+    text-align: justify;
+    margin-top: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: solid 1px blue;*/
+}
+
+.box{
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    background-color: #333333;
+    border-bottom: 3px solid hotpink;
+    font-family: "bebas neue";
+}
+
+#send-button{
+    background-color: #333333 ;
+    color: #ffffff;
+    border: none;
+    padding: 7px 15px;
+    border-bottom: 3px solid hotpink;
+    font-family: "bebas neue";
+}
+
+#send-button:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
+.footer-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333333;
+    padding: 10px;
+    /*border: solid 1px white;*/
+}
+
+
+@media (max-width: 1000px) { /* adjust viewport size as needed */
+    .projects {
+        grid-template-columns: 1fr;
+    }
+    .skills{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+
+@media (max-width: 450px){
+    .intro-container{
+
+    }
+    .skills{
+        grid-template-columns: 1fr;
+    }
 }
