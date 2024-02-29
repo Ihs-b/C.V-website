@@ -49,24 +49,32 @@ main{
 
 
 
+/*.intro-container{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    border: solid hotpink 2px;*/
+/*}*/
+
 .intro-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    /*border: solid hotpink 2px;*/
 }
 
 .intro-text{
-    margin-left: 20px;
-
+    /*max-width: 50%;*/
+    margin-left: 10px;
 }
 p{
     font-family: "Oswald" ;
     font-weight: lighter;
 }
 .profile-img{
-    border-radius: 15px;
-    width: 50%;
+    /*max-width: 50%;*/
+    /*border-radius: 15px;*/
+    /*width: 50%;*/
     /*height: 10.5rem;*/
 }
 
@@ -95,7 +103,7 @@ img{
 .second-contact-me{
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -204,7 +212,10 @@ form{
 
 @media (max-width: 450px){
     .intro-container{
-
+        flex-direction: column;
+    }
+    .profile-img, .intro-text{
+        width: 100%;
     }
     .skills{
         grid-template-columns: 1fr;
